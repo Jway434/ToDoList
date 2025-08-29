@@ -14,12 +14,12 @@ def view_tasks():
 
 # Step 4: Delete a task
 def delete_task(index):
-    if tasks(index) == tasks(index-1):
-        tasks(index).pop
+    task = tasks(index).pop
+    print(f"Deleted : {taks}")
 
 # Step 5: Mark task complete
 def mark_complete(index):
-    tasks[index] += " ✅"
+    tasks[index] = tasks[index] + " ✅"
 
 
 
@@ -35,6 +35,7 @@ if __name__ == "__main__":
     add_task("Finish Cyber 201 assignment")
     add_task("Push code to GitHub")
     view_tasks()
+    delete_task()
     mark_complete(0)
     view_tasks()
     #save_tasks()
