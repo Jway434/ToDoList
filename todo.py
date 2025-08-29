@@ -23,12 +23,6 @@ def mark_complete(index):
 
 
 
-# Step 6: Save/load tasks (extra stretch for today)
-#def save_tasks(filename="tasks.txt"):
-#    with open(filename, "w") as f:
-#        for task in tasks:
-#            f.write(task + "\n")
-
 # Demo flow (you can run this file directly: python todo.py)
 if __name__ == "__main__":
     add_task("Finish Cyber 201 assignment")
