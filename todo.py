@@ -8,15 +8,29 @@ def add_task(task):
     tasks.append(task)
 
 # Step 3: View tasks
+def view_tasks():
+    for task in tasks:
+        print(task)
 
 # Step 4: Delete a task
-
+def delete_task(index):
+    if 0 <= index < len(tasks):
+        tasks.pop(index)
+    else:
+        print("Invalid task index")
 
 # Step 5: Mark task complete
-
+def mark_complete(index):
+    if 0 <= index < len(tasks):
+        tasks[index] += " (Completed)"
+    else:
+        print("Invalid task index")
 
 # Step 6: Save/load tasks (extra stretch for today)
-
+def save_tasks(filename="tasks.txt"):
+    with open(filename, "w") as f:
+        for task in tasks:
+            f.write(task + "\n")
 
 # Demo flow (you can run this file directly: python todo.py)
 if __name__ == "__main__":
